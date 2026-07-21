@@ -68,7 +68,11 @@
         font-size: 1.25rem;
     }
     .logo {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+    }
+    nav {
+        padding: 0 1.25rem;
+        height: 10vh;
     }
     .nav-links {
         flex-direction: column;
@@ -86,8 +90,12 @@
     .title {
         font-size: 2rem;
     }
-    .text-container {
-        text-align: justify;
+    .text-container, .about-details {
+        padding: 0 0.75rem;
+        text-align: center;
+    }
+    .text-container p {
+        max-width: 100%;
     }
 }
 
