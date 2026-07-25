@@ -14,6 +14,13 @@
     }
     #hamburger-nav {
         display: flex;
+        margin: 1rem auto 0;
+        width: min(96vw, 1120px);
+        padding: 0.85rem 1.2rem;
+        background: linear-gradient(135deg, rgba(248, 250, 252, 0.98), rgba(240, 244, 248, 0.95));
+        border: 1px solid rgba(148, 163, 184, 0.24);
+        border-radius: 999px;
+        box-shadow: 0 24px 58px rgba(15, 23, 42, 0.12);
     }
     #experience, .experience-details-container {
         margin-top: 2rem;
@@ -41,8 +48,12 @@
 }
 
 @media screen and (max-width: 600px) {
-    #contact, footer {
+    #contact {
         height: 40vh;
+    }
+    footer {
+        height: auto;
+        padding: 1rem 0;
     }
     #profile {
         height: 83vh;
@@ -53,7 +64,7 @@
     }
     footer nav {
         height: fit-content;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
     .about-containers, .contact-info-upper-container, .btn-container {
         flex-wrap: wrap;
@@ -71,13 +82,25 @@
         font-size: 1.25rem;
     }
     nav {
-        padding: 0 1.25rem;
-        height: 10vh;
+        padding: 0.65rem 0.9rem;
+        min-height: 56px;
+        margin-top: 0.75rem;
+        width: min(96vw, 1120px);
+        background: linear-gradient(135deg, rgba(248, 250, 252, 0.98), rgba(240, 244, 248, 0.95));
+        border: 1px solid rgba(148, 163, 184, 0.24);
+        border-radius: 999px;
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.10);
     }
-    .nav-links {
+    #desktop-nav .nav-links {
         flex-direction: column;
         gap: 0.5rem;
         text-align: center;
+    }
+    footer .nav-links {
+        flex-direction: row;
+        gap: 1.25rem;
+        text-align: center;
+        justify-content: center;
     }
     .section__pic-container {
         width: auto;
