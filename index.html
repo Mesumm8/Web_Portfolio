@@ -231,9 +231,16 @@
     <section id="projects">
         <p class="section__text__p1">Browse My Recent</p>
         <h1 class="title">Projects</h1>
+        <div class="project-filter-bar" role="tablist" aria-label="Project categories">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="mobile">Mobile App Projects</button>
+            <button class="filter-btn" data-filter="website">Website Projects</button>
+            <button class="filter-btn" data-filter="ai">AI Projects</button>
+            <button class="filter-btn" data-filter="games">Cute Games</button>
+        </div>
         <div class="experience-details-container">
             <div class="about-containers">
-                <div class="details-container color-container">
+                <div class="details-container color-container project-card" data-category="website">
                 <div class="article-container">
                     <img src="./assets/techshare.png" alt="Project 1" class="project-img"/>
                 </div>
@@ -251,7 +258,7 @@
                     </button>
                 </div>
                 </div>
-                <div class="details-container color-container">
+                <div class="details-container color-container project-card" data-category="mobile">
                 <div class="article-container">
                     <img src="./assets/sov_oman.png" alt="Project 2" class="project-img"/>
                 </div>
@@ -270,7 +277,7 @@
                     </button>
                 </div>
                 </div>
-                <div class="details-container color-container">
+                <div class="details-container color-container project-card" data-category="website">
                 <div class="article-container">
                     <img src="./assets/bonn.png" alt="Project 3" class="project-img"/>
                 </div>
@@ -289,7 +296,7 @@
                     </button>
                 </div>
                 </div>
-                <div class="details-container color-container">
+                <div class="details-container color-container project-card" data-category="ai">
                 <div class="article-container">
                     <img src="./assets/bot.png" alt="Project 3" class="project-img"/>
                 </div>
@@ -307,7 +314,7 @@
                     </button>
                 </div>
                 </div>
-                <div class="details-container color-container">
+                <div class="details-container color-container project-card" data-category="ai">
                 <div class="article-container">
                     <img src="./assets/bot.png" alt="Project 3" class="project-img"/>
                 </div>
@@ -325,7 +332,7 @@
                     </button>
                 </div>
                 </div>
-                <div class="details-container color-container">
+                <div class="details-container color-container project-card" data-category="ai">
                 <div class="article-container">
                     <img src="./assets/bot.png" alt="Project 3" class="project-img"/>
                 </div>
@@ -335,6 +342,23 @@
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn" 
                     onclick="location.href='https://github.com/Mesumm8/AI-Wealth-Dash'">
+                        Github
+                    </button>
+                    <button class="btn btn-color-2 project-btn" 
+                    onclick="location.href='https://github.com/'">
+                        Live Demo
+                    </button>
+                </div>
+                </div>
+                <div class="details-container color-container project-card" data-category="games">
+                <div class="article-container">
+                    <img src="./assets/project-1.png" alt="Cute game project" class="project-img"/>
+                </div>
+                <h2 class="experience-sub-title project-title">Flappy Bird</h2>
+                <p class="section__text__p1">A cozy arcade-style game concept with cheerful visuals, playful mechanics, and a soft, inviting experience for casual players.</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" 
+                    onclick="location.href='https://github.com/'">
                         Github
                     </button>
                     <button class="btn btn-color-2 project-btn" 

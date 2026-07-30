@@ -113,6 +113,14 @@
     .title {
         font-size: 2rem;
     }
+    .project-filter-bar {
+        gap: 0.6rem;
+    }
+
+    .filter-btn {
+        width: 100%;
+    }
+
     .text-container, .about-details {
         padding: 0 0.75rem;
         text-align: center;
