@@ -233,17 +233,19 @@
         <h1 class="title">Projects</h1>
         <div class="project-filter-bar" role="tablist" aria-label="Project categories">
             <button class="filter-btn active" data-filter="all">All Projects</button>
-            <button class="filter-btn" data-filter="mobile">Mobile App Projects</button>
-            <button class="filter-btn" data-filter="website">Website Projects</button>
+            <button class="filter-btn" data-filter="mobile">Mobile Applicaton</button>
+            <button class="filter-btn" data-filter="website">Websites</button>
             <button class="filter-btn" data-filter="ai">AI Projects</button>
-            <button class="filter-btn" data-filter="games">Cute Games</button>
+            <button class="filter-btn" data-filter="games">Games</button>
         </div>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container color-container project-card" data-category="website">
-                <div class="article-container">
-                    <img src="./assets/techshare.png" alt="Project 1" class="project-img"/>
-                </div>
+        <div class="project-carousel-wrapper">
+            <button type="button" class="carousel-arrow carousel-prev" id="carousel-prev">&#10094;</button>
+            <div class="project-carousel">
+                <div class="project-carousel-track">
+                    <div class="details-container color-container project-card" data-category="mobile">
+                    <div class="article-container">
+                        <img src="./assets/techshare.png" alt="Project 1" class="project-img"/>
+                    </div>
                 <h2 class="experience-sub-title project-title">Tech-Share</h2>
                 <p class="section__text__p1">AI-powered marketplace for buying and selling gadgets with automated pricing, 
                     Firebase authentication, real-time database, and secure transactions.</p>
@@ -277,7 +279,7 @@
                     </button>
                 </div>
                 </div>
-                <div class="details-container color-container project-card" data-category="website">
+                <div class="details-container color-container project-card" data-category="mobile">
                 <div class="article-container">
                     <img src="./assets/bonn.png" alt="Project 3" class="project-img"/>
                 </div>
@@ -354,8 +356,26 @@
                 <div class="article-container">
                     <img src="./assets/project-1.png" alt="Cute game project" class="project-img"/>
                 </div>
+                <h2 class="experience-sub-title project-title">Retro Snake Game</h2>
+                <p class="section__text__p1">A classic, Nokia-inspired 2D Snake game built with HTML5, CSS3, and vanilla JavaScript featuring keyboard controls, progressive speed scaling, score tracking, and dynamic food generation.</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" 
+                    onclick="location.href='https://github.com/Mesumm8/SnakeGame'">
+                        Github
+                    </button>
+                    <button class="btn btn-color-2 project-btn" 
+                    onclick="location.href='https://github.com/'">
+                        Live Demo
+                    </button>
+                </div>
+                </div>
+                <div class="details-container color-container project-card" data-category="games">
+                <div class="article-container">
+                    <img src="./assets/project-1.png" alt="Cute game project" class="project-img"/>
+                </div>
                 <h2 class="experience-sub-title project-title">Flappy Bird</h2>
                 <p class="section__text__p1">A cozy arcade-style game concept with cheerful visuals, playful mechanics, and a soft, inviting experience for casual players.</p>
+                <br>
                 <div class="btn-container">
                     <button class="btn btn-color-2 project-btn" 
                     onclick="location.href='https://github.com/'">
@@ -367,7 +387,25 @@
                     </button>
                 </div>
                 </div>
+                <div class="details-container color-container project-card" data-category="games">
+                <div class="article-container">
+                    <img src="./assets/project-1.png" alt="Cute game project" class="project-img"/>
+                </div>
+                <h2 class="experience-sub-title project-title">PacMan Game</h2>
+                <p class="section__text__p1">A responsive 2D Pac-Man web game built with HTML5 Canvas and JavaScript, featuring a tilemap-rendered maze, WASD/arrow controls, ghost AI, AABB collisions, and complete state tracking for lives and scores.</p>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" 
+                    onclick="location.href='https://github.com/Mesumm8/PACKMAN_Game'">
+                        Github
+                    </button>
+                    <button class="btn btn-color-2 project-btn" 
+                    onclick="location.href='https://github.com/'">
+                        Live Demo
+                    </button>
+                </div>
+                </div>
             </div>
+            <button type="button" class="carousel-arrow carousel-next" id="carousel-next">&#10095;</button>
         </div>
         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" 
         onclick="location.href='./#contact'"/>

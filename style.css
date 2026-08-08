@@ -523,6 +523,84 @@ article .icon {
     border-color: var(--primary);
 }
 
+.project-carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.project-carousel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.project-carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.4s ease;
+    will-change: transform;
+    flex-wrap: nowrap;
+}
+
+.project-card {
+    flex: 0 0 calc((100% - 3rem) / 3);
+    min-width: calc((100% - 3rem) / 3);
+    box-sizing: border-box;
+}
+
+.carousel-arrow {
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(15, 23, 42, 0.12);
+    background: #ffffff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.35rem;
+    color: var(--text);
+    cursor: pointer;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.carousel-prev {
+    left: 0;
+}
+
+.carousel-next {
+    right: 0;
+}
+
+.carousel-arrow:hover {
+    background: rgba(37, 99, 235, 0.08);
+}
+
+.carousel-arrow:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+@media screen and (max-width: 900px) {
+    .project-card {
+        flex: 0 0 calc((100% - 1.5rem) / 2);
+        min-width: calc((100% - 1.5rem) / 2);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .project-carousel-wrapper {
+        gap: 0.5rem;
+    }
+    .project-card {
+        flex: 0 0 100%;
+        min-width: 100%;
+    }
+}
+
 .project-card.is-hidden {
     display: none;
 }
