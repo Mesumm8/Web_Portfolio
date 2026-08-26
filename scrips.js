@@ -95,3 +95,43 @@ window.addEventListener('resize', () => {
 window.addEventListener('load', () => {
     refreshCarousel();
 });
+
+const certificateTrack = document.getElementById('certificate-track');
+const certificateSlides = document.querySelectorAll('.certificate-slide');
+const certificateDots = document.getElementById('certificate-dots');
+const certificatePrev = document.getElementById('certificate-prev');
+const certificateNext = document.getElementById('certificate-next');
+let currentCertificate = 0;
+
+function showCertificate(index) {
+    currentCertificate = (index + certificateSlides.length) % certificateSlides.length;
+    certificateTrack.style.transform = `translateX(-${currentCertificate * 100}%)`;
+    certificateSlides.forEach((slide, slideIndex) => {
+        slide.classList.toggle('is-active', slideIndex === currentCertificate);
+        slide.querySelector('.certificate-count').textContent = `${String(slideIndex + 1).padStart(2, '0')} / ${String(certificateSlides.length).padStart(2, '0')}`;
+    });
+    certificateDots.querySelectorAll('.certificate-dot').forEach((dot, dotIndex) => {
+        const isActive = dotIndex === currentCertificate;
+        dot.classList.toggle('is-active', isActive);
+        dot.setAttribute('aria-current', isActive ? 'true' : 'false');
+    });
+}
+
+certificateSlides.forEach((_, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'certificate-dot';
+    dot.setAttribute('aria-label', `Show certificate ${index + 1}`);
+    dot.addEventListener('click', () => showCertificate(index));
+    certificateDots.appendChild(dot);
+});
+
+certificatePrev.addEventListener('click', () => showCertificate(currentCertificate - 1));
+certificateNext.addEventListener('click', () => showCertificate(currentCertificate + 1));
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') showCertificate(currentCertificate - 1);
+    if (event.key === 'ArrowRight') showCertificate(currentCertificate + 1);
+});
+
+showCertificate(0);

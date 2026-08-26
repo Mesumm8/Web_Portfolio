@@ -555,7 +555,112 @@
     <section id="certificates">
         <p class="section__text__p1">Certificates</p>
         <h1 class="title">My Certificates</h1>
-        <!-- Certificate content goes here -->
+        <div class="certificate-slider" aria-label="Certificate gallery">
+            <div class="certificate-slide-area">
+                <!-- Navigation controls: these buttons do not contain certificate slides. -->
+                <div class="certificate-controls">
+                    <button type="button" class="certificate-arrow certificate-prev" id="certificate-prev" aria-label="Previous certificate">&#10094;</button>
+                    <button type="button" class="certificate-arrow certificate-next" id="certificate-next" aria-label="Next certificate">&#10095;</button>
+                </div>
+                <!-- Certificate slides: add new certificate article blocks inside this track. -->
+                <div class="certificate-viewport">
+                    <div class="certificate-track" id="certificate-track">
+                        <!-- Add each new certificate as one article block below. Change only its image, alt text, and title. -->
+                        <!-- Certificate 1 -->
+                        <article class="certificate-slide is-active">
+                            <div class="certificate-caption">
+                                <span class="certificate-count"></span>
+                                <h2>Basic Web Development Bootcamp</h2>
+                            </div>
+                            <div class="certificate-image-frame">
+                                <img src="./assets/certificates/shape-ai.png" alt="Certificate in web development" class="certificate-img">
+                            </div>
+                        </article>
+                        <!-- Certificate 2 -->
+                        <article class="certificate-slide">
+                            <div class="certificate-caption">
+                                <span class="certificate-count"></span>
+                                <h2>Advance Software Engineering Job Simulation</h2>
+                            </div>
+                            <div class="certificate-image-frame">
+                                <img src="./assets/certificates/Advance-SE.png" alt="Advance Software Engineering" class="certificate-img">
+                            </div>
+                        </article>
+                        <!-- Certificate 3 -->
+                        <article class="certificate-slide">
+                            <div class="certificate-caption">
+                                <span class="certificate-count"></span>
+                                <h2>Machine Learning - Python</h2>
+                            </div>
+                            <div class="certificate-image-frame">
+                                <img src="./assets/certificates/MachineLearning - Python Certificate.png" alt="Machine Learning - Python" class="certificate-img certificate-img-contained">
+                            </div>
+                        </article>
+                        <!-- Certificate 4 -->
+                         <article class="certificate-slide">
+                            <div class="certificate-caption">
+                                <span class="certificate-count"></span>
+                                <h2>Machine Learning - R</h2>
+                            </div>
+                            <div class="certificate-image-frame">
+                                <img src="./assets/certificates/MachineLearning With R Certificate.png" alt="Machine Learning - R" class="certificate-img certificate-img-contained">
+                            </div>
+                        </article>
+                        <!-- Certificate 5 -->
+                         <article class="certificate-slide">
+                            <div class="certificate-caption">
+                                <span class="certificate-count"></span>
+                                <h2>Pre-Graduation Program</h2>
+                            </div>
+                            <div class="certificate-image-frame">
+                                <img src="./assets/certificates/pre-grad.png" alt="Pre-Graduation Program" class="certificate-img">
+                            </div>
+                        </article>
+                        <!-- Certificate 6 -->
+                         <article class="certificate-slide">
+                            <div class="certificate-caption">
+                                <span class="certificate-count"></span>
+                                <h2>Remote Internship</h2>
+                            </div>
+                            <div class="certificate-image-frame">
+                                <img src="./assets/certificates/Remote Internship Certificate.png" alt="Remote Internship" class="certificate-img">
+                            </div>
+                        </article>
+                        <!-- Certificate 7 -->
+                         <article class="certificate-slide">
+                            <div class="certificate-caption">
+                                <span class="certificate-count"></span>
+                                <h2>Software Development Remote</h2>
+                            </div>
+                            <div class="certificate-image-frame">
+                                <img src="./assets/certificates/SD-Remote.png" alt="Software Development Remote" class="certificate-img certificate-img-contained">
+                            </div>
+                        </article>
+                        <!-- Certificate 8 -->
+                         <article class="certificate-slide">
+                            <div class="certificate-caption">
+                                <span class="certificate-count"></span>
+                                <h2>GFP Fest</h2>
+                            </div>
+                            <div class="certificate-image-frame">
+                                <img src="./assets/certificates/GFP.png" alt="GFP Fest" class="certificate-img">
+                            </div>
+                        </article>
+                        <!-- Certificate 9 -->
+                         <article class="certificate-slide">
+                            <div class="certificate-caption">
+                                <span class="certificate-count"></span>
+                                <h2>Deans-Cup</h2>
+                            </div>
+                            <div class="certificate-image-frame">
+                                <img src="./assets/certificates/Deans-cup.png" alt="Deans-Cup" class="certificate-img certificate-img-contained">
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+            <div class="certificate-dots" id="certificate-dots" aria-label="Choose a certificate"></div>
+        </div>
         <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" 
         onclick="location.href='./#contact'"/>
     </section>
