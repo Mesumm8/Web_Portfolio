@@ -20,7 +20,7 @@ const carouselTrack = document.querySelector('.project-carousel-track');
 const prevArrow = document.getElementById('carousel-prev');
 const nextArrow = document.getElementById('carousel-next');
 
-let currentPage = 0;
+let currentIndex = 0;
 let visibleCardsPerPage = 3;
 
 function updateVisibleCount() {
@@ -40,18 +40,19 @@ function getFilteredCards() {
 
 function updateCarousel() {
     const cards = getFilteredCards();
-    const pageCount = Math.max(1, Math.ceil(cards.length / visibleCardsPerPage));
-    if (currentPage >= pageCount) currentPage = pageCount - 1;
+    const maxIndex = Math.max(0, cards.length - visibleCardsPerPage);
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
 
-    const slideWidth = carouselTrack.clientWidth / pageCount;
-    const shift = currentPage * slideWidth;
+    const cardWidth = cards[0]?.getBoundingClientRect().width || 0;
+    const gap = parseFloat(getComputedStyle(carouselTrack).gap) || 0;
+    const shift = currentIndex * (cardWidth + gap);
     carouselTrack.style.transform = `translateX(-${shift}px)`;
-    prevArrow.disabled = currentPage === 0;
-    nextArrow.disabled = currentPage >= pageCount - 1;
+    prevArrow.disabled = currentIndex === 0;
+    nextArrow.disabled = currentIndex >= maxIndex;
 }
 
 function refreshCarousel() {
-    currentPage = 0;
+    currentIndex = 0;
     updateVisibleCount();
     updateCarousel();
 }
@@ -73,16 +74,16 @@ filterButtons.forEach((button) => {
 
 nextArrow.addEventListener('click', () => {
     const cards = getFilteredCards();
-    const pageCount = Math.max(1, Math.ceil(cards.length / visibleCardsPerPage));
-    if (currentPage < pageCount - 1) {
-        currentPage += 1;
+    const maxIndex = Math.max(0, cards.length - visibleCardsPerPage);
+    if (currentIndex < maxIndex) {
+        currentIndex += 1;
         updateCarousel();
     }
 });
 
 prevArrow.addEventListener('click', () => {
-    if (currentPage > 0) {
-        currentPage -= 1;
+    if (currentIndex > 0) {
+        currentIndex -= 1;
         updateCarousel();
     }
 });

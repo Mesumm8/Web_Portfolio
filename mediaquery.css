@@ -121,8 +121,9 @@
         height: 38px;
     }
     .certificate-image-frame {
-        height: min(68vw, 520px);
-        min-height: 220px;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 1052 / 841;
     }
     .certificate-caption {
         align-items: center;
